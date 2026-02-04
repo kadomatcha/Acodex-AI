@@ -1,38 +1,72 @@
 
-![Screenshot_2025-12-29-22-19-02-787-edit_com whatsapp](https://github.com/user-attachments/assets/97b8a530-3853-4024-b4d4-ebc1109eae4b)
 
-fitur
-- bisa run di termux, panel, vps, rdp, laptop
-- store groupMetadata, pushname
-- chat manager (self / public / individual group / override setting)
-- user manager (bisa block user / tambah trusted user (owner)
-- prefix manager (hidupkan / matikan prefix / tambah prefix baru)
-- plugin manager (pasang plugin, hapus plugin)
-- isolated hot process (bisa restart bot kapanpun... cocok kalau konsumsi ram udh tinggi)
-- easy customize (ada banyak pilihan edit tampilan menu.. cek aja sendiri wkwk)
-- eval (buat yg suka main kode)
-- eval async (eval juga tapi di bungkus async function)
-- shell access
+---
 
-- small ram usage
-- fast and light weight
-- use node js terbaru ya!
+# 🤖 Acodex AI
 
-![Screenshot_2025-12-29-22-24-44-775_com whatsapp](https://github.com/user-attachments/assets/bdf882fa-7695-4d07-8f14-6e1959c3e01b)
+<p align="center">
+  <img src="https://cdn.nekohime.site/file/KyqNp64R.jpg" alt="Acodex AI Thumbnail" width="600"/>
+</p>
 
-small ram usage
+<p align="center">
+  <b>Fast • Lightweight • Modular WhatsApp Bot Framework</b><br>
+  Built for Termux, Panel, VPS, RDP, & Laptop
+</p>
 
-![IMG_20251229_221808](https://github.com/user-attachments/assets/a184f4de-1b85-4dae-89b9-64fcb0aacaf6)
+---
 
+## 🚀 Tentang Acodex AI
 
+**Acodex AI** adalah WhatsApp bot framework berbasis **Node.js terbaru** yang fokus pada:
+- **performa ringan**
+- **manajemen plugin fleksibel**
+- **kontrol penuh lewat sistem manager**
+- **mudah dikustomisasi**
 
+Cocok buat developer yang suka sistem rapi, scalable, dan anti ribet.
 
-serialize message object
-```javascript
+---
+
+## ✨ Fitur Utama
+
+- ✅ Bisa run di **Termux, Panel, VPS, RDP, Laptop**
+- ✅ Store `groupMetadata` & `pushName`
+- ✅ **Chat Manager**
+  - self
+  - public
+  - private
+  - group
+  - override setting
+- ✅ **User Manager**
+  - block user
+  - trusted user (owner)
+- ✅ **Prefix Manager**
+  - enable / disable prefix
+  - add prefix baru
+- ✅ **Plugin Manager**
+  - pasang plugin
+  - hapus plugin
+- ✅ **Isolated Hot Process**
+  - restart bot kapan saja
+  - aman saat RAM tinggi
+- ✅ **Easy Customize**
+  - banyak opsi tampilan menu
+- ✅ **Eval**
+- ✅ **Eval Async**
+- ✅ **Shell Access**
+- ✅ **Small RAM Usage**
+- ✅ **Fast & Lightweight**
+- ✅ **Node.js Versi Terbaru**
+
+---
+
+## 🧠 Serialize Message Object
+
+```
 {
   chatId: 'XXXXXXXXXX98950133@g.us',
   senderId: 'XXXXXXXXXX29145@lid',
-  pushName: 'wolep',
+  pushName: 'Kado',
   type: 'conversation',
   text: '! m',
   messageId: 'XXXXXXXXXX8A6704E1D6A014F2C98142',
@@ -43,8 +77,8 @@ serialize message object
 }
 ```
 
-serialize quoted message object
-```javascript
+```Serialize Quoted Message
+
 {
   chatId: 'XXXXXXXXXX98950133@g.us',
   senderId: 'XXXXXXXXXX33142@lid',
@@ -55,9 +89,10 @@ serialize quoted message object
   message: [Getter]
 }
 ```
+---
 
-plugin example
-```javascript
+```🧩 Contoh Plugin Acodex AI
+
 import { textOnlyMessage, sendText } from '../../system/helper.js'
 
 /**
@@ -69,7 +104,6 @@ async function handler({ sock, m, q, text, jid, command, prefix }) {
     if (q) return
     if (text) return
     await sendText(sock, jid, `halo juga`, m)
-    return
 }
 
 handler.pluginName = 'halo'
@@ -81,25 +115,64 @@ handler.meta = {
     fileName: 'halo.js',
     version: '1',
     author: 'ambatukam',
-    note: 'ambasing',
+    note: 'ambasing'
 }
+
 export default handler
 ```
 
+---
 
-cara pakai
+⚙️ Cara Pakai
 
-
-```
-git clone
-npm i
+git clone https://github.com/kadomatcha/Acodex-AI.git
+cd Acodex-AI
+npm install
 npm start
-pilih qr apa pairing code
-lalu cepet" kirim pesan ke bot dengan command request_owner (buat jadi owner pertama) via private chat, bisa juga di pakai self bot (diri sendiri jadi bot, kirim nya ke diri sendiri juga)
-enjoy
-```
+
+1. Pilih QR atau Pairing Code
 
 
-join grup wacap ku buat share plugin, saran, dll
+2. Kirim command berikut via private chat ke bot:
 
-https://chat.whatsapp.com/HjDJzwSBZQW0cLYbJorXP2
+request_owner
+
+
+3. Owner pertama otomatis terset
+
+
+4. Bisa dipakai self-bot (chat ke diri sendiri)
+
+
+5. Enjoy 🚀
+
+
+
+
+---
+
+👥 Komunitas
+
+Gabung grup WhatsApp buat:
+
+share plugin
+
+request fitur
+
+saran & diskusi
+
+
+👉 https://chat.whatsapp.com/HjDJzwSBZQW0cLYbJorXP2
+
+
+---
+
+👨‍💻 Developer
+
+Kado
+Creator & Maintainer of Acodex AI
+
+
+---
+
+> Acodex AI — simple, powerful, and built for developers.
